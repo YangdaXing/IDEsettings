@@ -1,0 +1,59 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+"高亮列
+set cursorcolumn
+
+set number
+"显示光标所在位置的行号和列号
+set number relativenumber
+
+"命令模式自动切换英文输入法
+set keep-english-in-normal
+
+"共享粘贴板
+set clipboard^=unnamed,unnamedplus
+
+let mapleader = ','
+nnoremap \\\\ :vsp<CR>
+nnoremap - :sp<CR>
+nnoremap E :tabp<CR>
+nnoremap R :tabn<CR>
+nnoremap c :tabc<CR>
+nnoremap q %
+
+"设置跳转居中
+map <C-]> <C-]>zz
+map <C-o> <C-o>zz
+map <C-t> <C-t>zz
+map gd gdzz
+
+"设置window移动
+map <C-h> <C-w>h
+map <C-l> <C-w>l
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-c> <C-w>c
+
+:map gi <Action>(Implementation(s))
+:map rn Action RenameElement<CR>
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+:map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+:map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+
+" Find more examples here: https://jb.gg/share-ideavimrc
